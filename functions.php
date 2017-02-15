@@ -12,6 +12,10 @@ register_nav_menus(
 array( 'main-menu' => __( 'Main Menu', 'blankslate' ) )
 );
 }
+add action( 'wp_enqueue_style', 'blankslate_load_styles' );
+function blankslate_load_styles() {
+wp_enqueue_style( 'style', get_stylesheet_uri() );
+}
 add_action( 'wp_enqueue_scripts', 'blankslate_load_scripts' );
 function blankslate_load_scripts()
 {
