@@ -32,3 +32,4 @@ function blankslate_widgets_init() {
   ) );
 }
 add_action( 'widgets_init', 'blankslate_widgets_init' );
+add_theme_support('custom-background');
