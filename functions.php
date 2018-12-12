@@ -17,6 +17,10 @@ function blankslate_load_scripts() {
   wp_enqueue_style( 'style', get_stylesheet_uri() );
   wp_enqueue_script( 'jquery' );
 }
+add action( 'wp_enqueue_style', 'blankslate_load_styles' );
+function blankslate_load_styles() {
+wp_enqueue_style( 'style', get_stylesheet_uri() );
+}
 add_action( 'wp_enqueue_scripts', 'blankslate_load_scripts' );
 
 
